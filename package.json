@@ -1,0 +1,23 @@
+{
+  "name": "hdjs_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "hdjs": "^1.2.105"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenChunChang/hdjs_study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChenChunChang/hdjs_study/issues"
+  },
+  "homepage": "https://github.com/ChenChunChang/hdjs_study#readme"
+}

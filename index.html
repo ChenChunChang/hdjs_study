@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hdjs_study</title>
+</head>
+<body>
+<input id="datetimepicker" class="form-control">
+</body>
+<script>
+    window.hdjs={};
+    //组件目录必须绝对路径(在网站根目录时不用设置)
+    window.hdjs.base = '/node_modules/hdjs';
+    //上传文件后台地址
+    window.hdjs.uploader = 'test/php/uploader.php?';
+    //获取文件列表的后台地址
+    window.hdjs.filesLists = 'test/php/filesLists.php?';
+</script>
+<script src="/node_modules/hdjs/static/requirejs/require.js"></script>
+<script src="/node_modules/hdjs/static/requirejs/config.js"></script>
+<script>
+    require(['hdjs'], function (hdjs) {
+        hdjs.datetimepicker('#datetimepicker', {
+            timepicker: false,
+            format: 'Y-m-d',
+            onChangeDateTime: function (dp, $input) {
+                console.log($input.val())
+            }
+        });
+    })
+</script>
+</html>
